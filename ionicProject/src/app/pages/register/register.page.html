@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://kit.fontawesome.com/84ea18e375.js" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<ion-content class="ion-pading">
+    <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet"/>
+
+    <div class="monContenu2">
+      <p class="titre">Authentification</p>
+      <img src="../../../assets/2.svg" alt="logo">
+
+
+  <p class="sous-titre">creer votre compte dès maintenant</p>
+
+
+
+  <div class="form"><form  [formGroup]="infoGeneral" (ngSubmit)="signup()">
+    <div class="zone" >
+
+      <i class="fas fa-user " ></i>
+      <input type="text" name="prenom" placeholder="Preom" formControlName="prenom" >
+  </div>
+  <div class="zone">
+
+    <i class="fas fa-user " ></i>
+    <input type="text" name="nom" placeholder="Nom" formControlName="nom">
+</div>
+<div class="zone">
+  <i class="material-icons" style="font-size: 21px;">email</i>
+  <input type="email" name="nom" placeholder="Email" formControlName="email" >
+  <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email n'est pas valide</ion-note>
+
+</div>
+<div class="zone">
+  <i style="font-size: 18px;" class="fas fa-lock i"></i>
+  <input type="password" name="password" placeholder="Mot de passe" formControlName="password" >
+  <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Le mot de passe doit contenir au minimum 6 caractères</ion-note>
+
+</div>
+
+     <input type="submit" class="btn" value="S'INSCRIRE" >
+     <p class="sous-titre2" (click)="signIn()">j'ai deja un compte</p>
+    </form>
+  </div>
+
+
+</div>
+</ion-content>
+
+

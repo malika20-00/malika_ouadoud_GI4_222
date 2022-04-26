@@ -1,0 +1,28 @@
+<div class="content">
+  <p class="titre1">Modifier cette formation</p>
+  <div>
+    <form [formGroup]="infoGeneral" (ngSubmit)="update()">
+      <div >
+      <label for="nom">Nom </label>
+      <input type="text" value="{{formation.nom}}" formControlName="nom" >
+    </div>
+
+    <div>
+      <label for="prix">Prix </label>
+      <input type="number" value="{{formation.prix}}" formControlName="prix">
+    </div>
+    <div>
+      <label for="date">Date </label>
+      <input type="text" value="{{formation.date}}" formControlName="date">
+    </div>
+    <div>
+      <label for="description">description</label>
+      <!-- <textarea name="description" cols="30" rows="5" formControlName="description" >{{formation.description}} -->
+      <!-- </textarea> -->
+      <input formControlName="description" name="description" value="{{formation.description}}" >
+    </div>
+      <input type="submit" value="MODIFIER">
+    </form>
+  </div>
+  <img src="../../../assets/detail.svg" alt="detail">
+</div>

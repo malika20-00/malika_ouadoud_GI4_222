@@ -1,0 +1,14 @@
+<div class="content">
+  <p class="titre1"> Les Details de la Formation</p>
+
+
+  <div class="details-formation" *ngIf="voirPlus">
+  <p class="nom">{{voirPlus.nom }}</p>
+  <p class="description"><span>Prix : </span>{{voirPlus.prix}}DH</p>
+  <p class="description"><span>Date : </span>{{voirPlus.date}}</p>
+  <p style="line-height: 1.5;" class='description'><span>Description : </span> {{voirPlus.description}}</p>
+<button (click)='reserve(data)'>RESERVER</button>
+</div>
+<img src="../../../assets/detail.svg" alt="detail">
+</div>
+

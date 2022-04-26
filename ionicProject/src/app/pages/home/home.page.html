@@ -1,0 +1,42 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="grand-contenu"  >
+<div class="myheader">
+<div class="logo"><span class="glyphicon glyphicon-education" style="margin-right: 10px;font-size: 35px;"></span>
+ <p style="margin: auto;font-size: 20px;"> TecEduc</p>
+</div>
+<i class="fa fa-sign-out" (click)=" signOut()" ></i>
+</div>
+
+<div class="contenu">
+  <div class="commande">
+    <i class="fa fa-shopping-basket" ></i>
+  <p>Voir mes commandes : </p>
+  <a (click)="mesCommandes()">  cliquez ici </a>
+  <p> .</p>
+</div>
+  <div class="petit-titre">
+
+
+    <p><i class="fa fa-pencil-square-o" style="margin-right:  10px;font-size: 17px;"></i>Les formations disponibles : </p> </div>
+    <div *ngFor="let item of listFormations;">
+      <div class="item">
+        <div class="item_flex">
+          <div >
+            <p class="nom">{{item.nom}}</p>
+            <p class="prix">{{item.prix}}dh</p>
+            <p> <a  (click)="versPageDetails(item.docid)"> plus de detail</a></p>
+          </div>
+          <button class="btn" (click)="reserve(item.docid)" >RESERVER</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
