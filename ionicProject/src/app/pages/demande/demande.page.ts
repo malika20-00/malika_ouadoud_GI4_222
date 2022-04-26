@@ -41,17 +41,17 @@ export class DemandePage implements OnInit {
               return this.bdService.getFormationById(e).subscribe(r => {
 
 
-                this.x.docid = e;
-                this.x.nom = r.data()['nom'];
-                this.x.date = r.data()['date'];
-                this.x.description = r.data()['description'];
-                this.x.prix = r.data()['prix'];
-                console.log(this.x);
-                this.formationReserved.push(this.x);
+              this.formationReserved.push({
+                docid : e,
+                nom :r.data()['nom'],
+                date : r.data()['date'],
+                description : r.data()['description'],
+                prix :r.data()['prix']
+              })
+
 
 
               });
-
 
 
             });}
